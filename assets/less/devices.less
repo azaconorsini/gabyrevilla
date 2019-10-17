@@ -1,0 +1,331 @@
+// BREAKPOINTS O PUNTOS DE QUIEBRE PARA DISPOSITIVOS MÓVILES Y OTRAS PANTALLAS
+// Ancho máximo de 480px - (xs) Dispositivos o pantallas extra pequeñas (Móviles)
+@import "_mixins.less";
+@import "_variables.less";
+@media only screen and (max-width: 380px) {
+	// MENU DE NAVEGACIÓN
+	// Establece la altura máxima que tendra el contenedor de imágenes
+	.carousel-fluid,
+   .fade-slide .item { height: 420px !important; }
+}
+@media only screen and (max-width: 480px) {
+	h1 { font-size: 30px; }
+	h2 { font-size: 24px; }
+	h3 { font-size: 18px; }
+	h4 { font-size: 14px; }
+	.heading { padding-bottom: 40px;	
+      .subtitle { line-height: 20px; }
+   }
+   
+	// Disminuye la altura de la barra superior y el texto
+	#top-bar-header {
+		height: auto;
+		padding-top: 10px;
+		padding-bottom: 10px;
+
+		.top-bar-nav > li {
+         padding-left: 4px;
+         padding-right: 4px;
+
+         a { font-size: @font-size-small; }
+      }
+	}
+	// MENÚ DE NAVEGACIÓN
+	// Ajuste  del logo y posicionamiento del boton del menu
+	.navbar-default {
+		.navbar-brand { max-width: 130px !important; }
+		.navbar-toggle { top: 60px !important }
+	}
+	// Cambios de tamaño de título y anchura máxima de contenedor de formulario
+	.subheader-container {
+      h5 { font-size: @font-size-base; }
+      small { font-size: (@font-size-small - 1); }
+      .search-form-container,
+      .shopcar-counter { width: 100%; }
+      .search-form-container { margin-bottom: 5px; }
+   }
+
+	// SLIDER DE IMAGENES
+   // Ajusta altura del slider de imagenes
+   // Modifica el contenedor de texto del slider, titulos y párrafos
+   // Cambia las dimensiones de los controles e indicadores del slider
+   .carousel-fluid,
+   .fade-slide .item { height: 380px; }
+
+   .carousel-fluid {
+   	.slide-caption {
+   		padding-right: 50px !important;
+   		padding-left: 50px !important;
+
+   		.container {
+   			padding-right: 0;
+   			padding-left: 0; 
+   		} 
+   		h1, h2 { font-size: @font-size-large !important; }
+   		p {
+   			font-size: @font-size-small;
+            line-height: 18px;
+   		}
+   		.btn-slide { padding: 12px 15px; }
+   	}
+   	.slide-style-left,
+      .slide-style-right { text-align: center !important; }
+      .carousel-control {
+         width: 40px;
+         height: 40px;
+         line-height: 40px;
+         font-size: 20px;
+
+         &.left  { left: 2%; }
+         &.right { right: 2% }
+      }
+      .carousel-indicators { display: none }
+   }
+
+   #cover-grid-container  {
+		.row > [class*=col-] { width: 100% !important; }
+	}
+	#cover-position-top { margin-top: -115px; }
+
+   // CONTENEDOR DE PRODUCTOS
+   // Cambiamos el tamaño del título del producto
+   // Reduce el tamaño de la referencia del prouducto
+   // Reduce el tamaño del precio
+   // Reduce el tamaño del botón de compra
+   .item-list-product {
+      .item-product { margin-bottom: 30px; }
+      .item-title {
+         font-size: @font-size-base;
+         line-height: 20px;
+         //white-space: normal;
+      }
+      .item-reference { font-size: 10px; }
+      .item-price { 
+         font-size: 20px;
+         line-height: 18px; 
+         margin-bottom: 15px;
+      }
+      .btn-shopping-item {
+         font-size: @font-size-small;
+         padding: 8px 12px;
+
+         i.fa { font-size: @font-size-base };
+      }
+   }
+
+   // FOOTER 
+   #footer-container {
+      padding-top: 40px;
+      .grid-col-footer  { width: 100%; margin-bottom: 20px }
+      .footer-title     { margin-bottom: 20px; }
+      .social-buttons   { margin: 10px 0; }
+      #footer-copyright { margin-top: 10px; }
+   }
+}
+// Ancho máximo de 640px - Dispositivos móviles extra pequeños (vista horizontal)
+@media only screen and (max-width: 640px) {
+	// Dismunuye el relleno en los contenedores
+	.padding-default {
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+}
+// Ancho máximo de 768px - (sm) Dispositivos o pantallas pequeñas (Tablets)
+@media only screen and (max-width: 767px) {
+	// HEADER - CABECERA
+	// Ajuste del texto en la barra superior de la cabecera
+	#top-bar-header {
+		.top-bar-nav { text-align: center; }
+	}
+	// MENÚ DE NAVEGACIÓN
+	// Establece un ancho máximo para el contenedor del logo
+	// Ajuste y ubicación del botón para el mostrar el menú
+	// Ajustamos la vista y efecto que tendrá el menú al desplegarse
+	.navbar.navbar-default {
+      .navbar-brand {
+         max-width: 150px !important;
+         margin: auto;
+         padding-bottom: 0;
+         float: none;
+         display: block;
+      }
+      .navbar-toggle {
+         position: absolute;
+         top: 50px;
+         right: 0;
+         border: none;
+         span.icon-bar {
+            background-color: @color-gray-dark;
+            height: 3px;
+         }
+         &:hover,
+         &:focus { background: transparent; }
+      }
+      // Menú que se desplega de izquierda a derecha
+      .navbar-collapse {
+         position: fixed;
+         top: 0;
+         left: -100%;
+         width: 100%;
+         height: 100%;
+         display: block;
+         .opacity(0);
+         background-color: @color-gray-dark;
+         -webkit-transition: opacity .35s ease, visibility .35s ease, transform .35s ease;
+         transition: opacity .35s ease, visibility .35s ease, transform .35s ease;
+         visibility: hidden;
+         z-index: 99999 !important;
+         &.open {
+            .opacity(1);
+            visibility: visible;
+            .prefixed(transform, translateX(100%));
+            z-index: 999;
+         }
+         .brand-menu { display: block; }
+         .navbar-wrapper {
+            overflow-y: scroll;
+            -webkit-overflow-scrolling: touch;
+            height: 100%;
+         }
+         .navbar-nav {
+            text-align: center;
+            max-width: 100%;
+            margin: 0;
+            &.navbar-right {
+               margin-top: 20px;
+               padding-top: 20px;
+               border-top: 1px solid darken(@color-gray-dark, 3%);
+            }
+            li {
+               a {
+                  font-size: @font-size-large;
+                  color: #f8f8f8;
+                  &:hover,
+                  &:hover:focus {
+                     background-color: @color-gold-base;
+                     color: @color-gray-dark;
+                  }
+               }
+            }
+         }
+      }
+   }
+
+   .subheader-container {
+      .responsive-col {
+         padding-bottom: 15px;
+         text-align: center;
+      }
+      h5:before { display: none; }
+      .shopcar-counter {
+         p {
+            span.only-paragraph { display: inline-block; }
+         }
+      }
+   }
+
+   // SLIDER DE IMAGENES
+   // Cambia las dimensiones de relleno del contenedor de texto
+   // Disminuye la fuente de los títulos
+   .carousel-fluid {
+   	.slide-caption {
+   		padding-right: 70px;
+   		padding-left: 70px;
+
+   		h1, h2 { font-size: 24px; }
+   	}
+   }
+
+   // FOOTER
+   #footer-container #footer-copyright {
+      .col-copyright { width: 100% }
+      .text-right,
+      .text-left { text-align: center !important; }
+   }
+}
+// Ancho máximo de 992px - (ms) Dispositivos o pantallas medianas (Escritorio)
+@media only screen and (max-width: 991px) {
+	.cover-container {
+      .cover-caption { padding: 15px;
+         h1 { font-size: 24px; }
+         h4 { font-size: 14px; }
+      }
+   }
+}
+// Ancho máximo de 1200px - (lg) Dispositivos o pantallas grandes (Escritorio)
+@media only screen and (max-width: 1200px) {
+	// Ajusta los contenedore globales al 100% para aprovechar el espacio de la pantalla
+	.container, .container-fluid { width: 100%; }
+ 
+   .item-list-product,
+   #cover-grid-container {
+      .row {
+         margin-right: -7.5px;
+         margin-left: -7.5px;
+         .item-product,
+         .col-cover {
+            padding-left: 7.5px;
+            padding-right: 7.5px;
+         }
+         .col-cover { margin-bottom: 15px; }
+      }
+   }
+}
+
+// PUNTOS DE QUIEBRE CON ANCHURA MÍNIMA
+
+@media only screen and (min-width: 1281px) {
+	// Ajuste ancho absoluto para contenedores globales con dimensión no superior a 1550px 
+	.container, .container-fluid {
+		width: 90%;
+		max-width: 1550px;
+	}
+	.subheader-container {
+      .shopcar-counter {
+         p {
+            span.only-paragraph {
+               display: inline-block;
+            }
+         }
+      }
+   }
+   // SLIDER DE IMAGENES
+   // Fija un altura máxima al slider de imagenes
+   .carousel-fluid, 
+   .fade-slide .item {
+   	height: 800px;
+   }
+}	
+
+// RANGOS LÍMIITES PARA GENERAR PUNTOS DE QUIEBRE
+
+@media only screen and (min-width: 767px) and (max-width: 991px) {
+	// MENÚ DE NAVEGACIÓN
+	// Ajustamos el menú al centro del documento
+	// Los enlaces o botones de navegación se posicionan horizontalmente bajo el logo
+	.navbar-default {
+		.navbar-header {
+			float: none;
+		}
+		.navbar-brand {
+			display: block;
+			margin: auto;
+		}
+		.navbar-collapse {
+			padding-top: 0;
+		}
+	}
+	.responsive-col {
+		position: absolute !important;
+		top: -100px;
+		right: 0;
+		padding-right: 15px;
+		text-align: right;
+
+		h5:before {
+		   float: right !important;
+		   margin-right: 0;
+		   margin-left: 15px;
+		}
+	}
+}

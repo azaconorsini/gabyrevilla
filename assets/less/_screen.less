@@ -1,0 +1,263 @@
+/* ======================================= 
+//== Ajustes de pantalla 
+======================================= */
+@media screen and (max-width: 480px){
+	// Propiedades generales del sitio web
+
+	h1 {
+		font-size: 30px;
+	}
+	h2 {
+		font-size: 24px;
+	}
+	h3 {
+		font-size: 18px;
+	}
+	h4 {
+		font-size: 14px;
+	}
+	section {
+		padding: 60px 0 40px;
+	}
+	.heading {
+		margin-bottom: 40px;
+	}
+	#header-container nav.navbar .navbar-header .navbar-brand {
+		max-width: 130px !important;
+	}
+	#header-container nav.navbar .navbar-header .navbar-toggle {
+		top: 60px !important
+	}
+
+   #main-header {
+      .subheader-container {
+         .absolute-col {
+            h5 {
+               font-size: @font-size-base;
+            }
+         }
+         .search-form-container,
+         .shopcar-counter {
+            width: 100%;
+         }
+         .search-form-container {
+            margin-bottom: 5px;
+         }
+      }
+   }
+}
+
+@media screen and (min-width: 767px) and (max-width: 991px) {
+   #main-header {
+      .navbar.navbar-default {
+         .navbar-header {
+            float: none;
+         }
+         .navbar-brand {
+            display: block;
+            margin: auto;
+         }
+         .navbar-collapse {
+            padding-top: 0;
+         }
+      }
+   }
+   .absolute-col {
+      position: absolute !important;
+      top: -100px;
+      right: 0;
+      padding-right: 0;
+      text-align: right;
+      h5:before {
+         float: right !important;
+         margin-right: 0;
+         margin-left: 15px;
+      }
+   }
+}
+
+@media screen and (max-width: 640px){
+	#header-container #topbar-container ul.social-buttons li a {
+		width: 25px;
+		height: 25px;
+		line-height: 24px;
+		font-size: 15px;
+		margin-top: 8px;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	#main-header {
+      // Barrar superior cabecera
+		#top-header {
+			height: auto;
+			padding: 12px 0; 
+         line-height: 16px;
+			.list-navbar {
+				text-align: center;
+				display: block;
+				width: 100%;
+				li {
+					margin-right: 10px;
+				}
+			}
+		}
+      // Ajustes menú principal
+      .navbar.navbar-default {
+         .navbar-brand {
+            max-width: 150px !important;
+            margin: auto;
+            padding-bottom: 0;
+            float: none;
+            display: block;
+         }
+         .navbar-toggle {
+            position: absolute;
+            top: 50px;
+            right: 0;
+            border: none;
+            span.icon-bar {
+               background-color: @color-gray-dark;
+               height: 3px;
+            }
+            &:hover,
+            &:focus {
+               background: transparent;
+            }
+         }
+         .navbar-collapse {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            min-height: 736px;
+            display: block;
+            .opacity(0);
+            background-color: @color-gray-dark;
+            -webkit-transition: opacity .35s ease, visibility .35s ease, transform .35s ease;
+            transition: opacity .35s ease, visibility .35s ease, transform .35s ease;
+            visibility: hidden;
+            overflow: scroll;
+            -webkit-overflow-scrolling: touch;
+            z-index: 1200 !important;
+            &.open {
+               .opacity(1);
+               visibility: visible;
+               .prefixed(transform, translateX(100%));
+               z-index: 999;
+               ul {
+                  li {
+                     opacity: 0;
+                     .prefixed(animation, menu .5s ease forwards);
+                     .prefixed(animation-delay, .2s);
+                     &:nth-of-type(2) {
+                        .prefixed(animation-delay, .3s);
+                     }
+                     &:nth-of-type(3) {
+                        .prefixed(animation-delay, .4s);
+                     }
+                     &:nth-of-type(4) {
+                        .prefixed(animation-delay, .5s);
+                     }
+                     &:nth-of-type(5) {
+                        .prefixed(animation-delay, .6s);
+                     }
+                     &:nth-of-type(6) {
+                        .prefixed(animation-delay, .7s);
+                     }
+                  }
+               }
+            }
+            .brand-menu {
+               display: block;
+            }
+            ul.nav.navbar-nav {
+               text-align: center;
+               &.navbar-right {
+                  margin-top: 20px;
+                  padding-top: 20px;
+                  border-top: 1px solid darken(@color-gray-dark, 3%);
+               }
+               li {
+                  a {
+                     font-size: @font-size-large;
+                     color: #f8f8f8;
+                     &:hover,
+                     &:hover:focus {
+                        background-color: @color-gold-base;
+                        color: @color-gray-dark;
+                     }
+                  }
+               }
+            }
+         }
+      }
+      .subheader-container {
+         .absolute-col {
+            padding-bottom: 15px;
+            text-align: center;
+            h5:before {
+               display: none;
+            }
+         }
+         .shopcar-counter {
+            p {
+               span.only-paragraph {
+                  display: inline-block;
+               }
+            }
+         }
+      }
+	}
+}
+
+
+
+// Nuevos puntos de quiebre con estructura mejorada
+// Próxima actualización incluye valores relativos (em) por absolutos (px)
+
+@media only screen and (max-width: 480px) {
+   #footer-container { .grid-col-footer {
+      width: 100%;
+   }}
+   #footer-container { .grid-col-footer {
+      &:nth-child(3) {
+         margin-bottom: 30px;
+         background-color: red
+      }
+   }}
+}
+@media only screen and (max-width: 640px) {
+
+}
+@media only screen and (max-width: 768px) {
+
+}
+@media only screen and (max-width: 992px) {
+   .container, .container-fluid {
+      width: 100%;
+   }
+   #main-header {.subheader-container {span.only-paragraph{
+      display: inline-block;
+   }}}
+   #footer-container { .grid-col-footer {
+      &:nth-child(1),
+      &:nth-child(2) {
+         margin-bottom: 30px;
+      }
+   }}
+}
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+
+}
+@media only screen and (min-width: 769px) and (max-width: 1280px) {
+
+}
+@media only screen and (min-width: 1281px) {
+   .container, .container-fluid {
+      width: 85%;
+   }
+   #main-header {.subheader-container {span.only-paragraph{
+      display: inline-block;
+   }}}
+}

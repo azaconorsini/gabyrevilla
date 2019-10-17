@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Gabyrevilla - Bienvenido(a) a tu tienda de moda</title>
+   <meta name="keywords" content="Gabyrevilla, Gaby, Revilla, Gabrielys Orsini, Robertsont Revilla, Johan Azacon">
+   <meta name="description" content="">
+   <!-- Archivos css principales -->
+   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+   <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+   <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+   <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+   <link rel="stylesheet" href="assets/css/desktop.min.css">
+   <link rel="stylesheet" href="assets/css/devices.min.css">
+   <!-- Favicons -->
+   <link rel="shortcut icon" type="image/x-icon" href="assets/img/brand/favicon.ico">
+   <link rel="icon" type="image/x-icon" href="assets/img/brand/favicon.ico">
+   <!-- =============================================================================
+       Nombre del tema: GabyRevilla
+       Autor: Johan J. Azacon O.
+       Perfil autor: https://github.com/azaconorsini/gabyrevilla
+       Contacto: j.azacon@gmail.com
+   ============================================================================= -->
+   <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+   <header id="header-container">
+      <div id="top-bar-header">
+         <div class="top-bar-container">
+            <div class="container">
+               <div class="row">
+                  <div class="col-xs-12 col-sm-6">
+                     <ul class="top-bar-nav list-inline">
+                        <li><a href="">Promociones</a></li>
+                        <li><a href="">Eventos</a></li>
+                        <li><a href="">Soporte 24/7</a></li>
+                     </ul>
+                  </div>
+                  <div class="hidden-xs col-sm-6">
+                     <ul class="social-buttons list-inline">
+                        <li><a href=""><i class="fa fa-facebook"></i></a></li>
+                        <li><a href=""><i class="fa fa-twitter"></i></a></li>
+                        <li><a href=""><i class="fa fa-instagram"></i></a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- Menú de navegación principal -->
+      <nav class="navbar navbar-default">
+         <div class="container">
+            <div class="row">
+               <div class="col-xs-12 col-sm-12 col-md-2">
+                  <div class="navbar-header">
+                     <a href="" class="navbar-brand">
+                        <img src="assets/img/brand/logo.png" alt="gabyrevilla.com.ve" class="img-responsive">
+                     </a>
+                     <button type="button" class="navbar-toggle" id="show-toggle" data-target="#navbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                     </button>
+                  </div>
+               </div>
+               <div class="col-xs-12 col-sm-12 col-md-10">
+                  <div class="navbar-collapse" id="navbar">
+                     <div class="navbar-wrapper">
+                        <div class="brand-menu">
+                           <div class="brand">
+                              <img src="assets/img/brand/logo-menu.png" alt="Gaby Revilla" class="img-responsive">
+                           </div>
+                           <a id="hide-toggle" class="close-toggle">
+                              <i class="fa fa-times"></i>
+                           </a>
+                        </div>
+                        <ul class="nav navbar-nav">
+                           <li><a href="">Inicio</a></li>
+                           <li><a href="">Conócenos</a></li>
+                           <li><a href="">¿Cómo comprar?</a></li>
+                           <li><a href="">Contáctenos</a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                           <li><a href=""><i class="fa fa-user-circle-o"></i> Crear cuenta</a></li>
+                           <li><a href=""><i class="fa fa-sign-in"></i> Acceder</a></li>
+                        </ul>
+                     </div>
+                  </div>
+                  <!-- Información de contacto y formulario de búsqueda -->
+                  <div class="subheader-container">
+                     <div class="row">
+                        <div class="responsive-col col-xs-12 col-sm-7 col-md-6">
+                           <h5><span>Contacto:</span> (0212) 482.8138</h5>
+                           <small><b>Horario:</b> Lunes a Viernes de 8:00am a 5:00pm</small>
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                           <div class="search-form-container gridbox-content">
+                              <form action="#" method="get" name="search-form" id="search-form">
+                                 <div class="input-group">
+                                    <input type="search" name="search" class="form-control" id="search" placeholder="Buscar producto...">
+                                    <div class="input-group-btn">
+                                       <button type="button" class="btn btn-default" id="submit-form"><i class="fa fa-search"></i></button>
+                                    </div>
+                                 </div>
+                              </form>
+                           </div>
+                           <div class="shopcar-counter gridbox-content">
+                              <a href="">
+                                 <div class="text-float">
+                                    <p><span class="only-paragraph">Compras</span> <i>(23)</i></p>
+                                 </div>
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </nav>
+   </header>
+   <section id="carousel-slide" class="carousel carousel-fluid fade-slide indicators-slide swipe-carousel">
+      <!-- Indicadores -->
+      <ol class="carousel-indicators">
+         <li class="active" data-target="#carousel-slide" data-slide-to="0"></li>
+         <li data-target="#carousel-slide" data-slide-to="1"></li>
+         <li data-target="#carousel-slide" data-slide-to="2"></li>
+      </ol>
+      <!-- Contenedor de slide -->
+      <div class="carousel-inner" role="listbox">
+         <div class="item active">
+            <div class="full-screen-slide" style="background-image: url(assets/img/carousel/item-1.jpg);"></div>
+            <div class="slide-overlay"></div>
+            <div class="slide-caption slide-style-right">
+               <div class="container">
+                  <h1>Las tendencias en moda</h1>
+                  <h2><strong>más destacadas</strong></h2>
+                  <p>Ropa para damas de alta calidad, confeccionada bajo estándares intenacionales</p>
+                  <a href="" class="btn btn-slide">Conocer más</a>
+               </div>
+            </div>
+         </div>
+         <div class="item">
+            <div class="full-screen-slide" style="background-image: url(assets/img/carousel/item-2.jpg);"></div>
+            <div class="slide-overlay"></div>
+            <div class="slide-caption slide-style-left">
+               <div class="container">
+                  <h1>Nueva colección para ellos</h1>
+                  <h2><strong>al mejor precio</strong></h2>
+                  <p>Próximamente, lanzaremos nueva línea de ropa para caballeros</p>
+                  <a href="" class="btn btn-slide">Conocer más</a>
+               </div>
+            </div>
+         </div>
+         <div class="item">
+            <div class="full-screen-slide" style="background-image: url(assets/img/carousel/item-3.jpg);"></div>
+            <div class="slide-overlay"></div>
+            <div class="slide-caption slide-style-center">
+               <div class="container">
+                  <h1>Temporada de nuevos estrenos</h1>
+                  <h2><strong>Chicas deportivas</strong></h2>
+                  <p>Estrenamos nueva temporada deportiva. ¡Descubre lo que está en tendencia!</p>
+                  <a href="" class="btn btn-slide">Conocer más</a>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- Controles -->
+      <a class="left carousel-control" href="#carousel-slide" role="button" data-slide="prev">
+         <span class="fa fa-angle-left" aria-hidden="true"></span>
+      </a>
+      <a class="right carousel-control" href="#carousel-slide" role="button" data-slide="next">
+         <span class="fa fa-angle-right" aria-hidden="true"></span>
+      </a>
+   </section>
+   <section id="cover-grid-container" class="padding-default">
+      <div id="cover-position-top" class="container">
+         <div class="row">
+            <article class="col-cover col-xs-12 col-sm-4">
+               <div class="cover-container">
+                  <a href=""></a>
+                  <img src="assets/img/elements/img-left.jpg" alt="" class="img-responsive">
+                  <div class="cover-caption center-caption">
+                     <h4 class="font-weight-light">Ya está disponible</h4>
+                     <h1>Nueva Colección</h1>
+                  </div>
+               </div> 
+            </article>
+            <article class="col-cover col-xs-6 col-sm-4">
+               <div class="cover-container">
+                  <a href=""></a>
+                  <img src="assets/img/elements/img-center.jpg" alt="" class="img-responsive">
+                  <div class="cover-caption top-caption">
+                     <h4>Más de 300 artículos de coleccción</h4>
+                     <h1 class="text-color-gold">Descuento - 30%</h1>
+                  </div>
+               </div> 
+            </article>
+            <article class="col-cover col-xs-6 col-sm-4">
+               <div class="cover-container">
+                  <a href=""></a>
+                  <img src="assets/img/elements/img-right.jpg" alt="" class="img-responsive">
+                  <div class="cover-caption center-caption text-right">
+                     <h4 class="text-color-white">Nueva moda y tendencias</h4>
+                     <h1 class="text-color-gold">Para ellas</h1>
+                  </div>
+               </div>
+            </article>
+         </div>
+      </div>
+   </section>
+   <section id="list-main-products" class="item-list-product padding-default">
+      <div class="container">
+         <header class="heading">
+            <h1 class="title"><span class="text-color-gold">Nueva</span> colección 2017</h1>
+            <h4 class="subtitle">Favoritos en Temporada Moda Urbana</h4>
+         </header>
+         <div class="row">
+            <article class="item-product col-xs-6 col-sm-6 col-md-3">
+               <figure class="item-image">
+                  <a href="" class="rellover-image">
+                     <img src="assets/img/product/product-index-1.png" alt="Angelina Besos" class="img-responsive">
+                  </a>
+               </figure>
+               <h5 class="item-title"><a href="" class="title-link"> Vestido con estampado Kisses</a></h5>
+               <p class="item-reference">Ref: 0001 - Angelina</p>
+               <p class="item-price"><small class="price-coin">Bf.</small> 75.300 <span class="old-price">93.500</span></p>
+               <a href="/" class="btn btn-shopping-item"><i class="fa fa-shopping-cart"></i> Comprar</a>
+            </article>
+            <article class="item-product col-xs-6 col-sm-6 col-md-3">
+               <figure class="item-image">
+                  <a href="" class="rellover-image">
+                     <img src="assets/img/product/product-index-2.png" alt="Angelina Besos" class="img-responsive">
+                  </a>
+               </figure>
+               <h5 class="item-title"><a href="" class="title-link">Vestido full licra estampado</a></h5>
+               <p class="item-reference">Ref: 0001 - Angelina</p>
+               <p class="item-price"><small class="price-coin">Bf.</small> 73.200</p>
+               <a href="/" class="btn btn-shopping-item"><i class="fa fa-shopping-cart"></i> Comprar</a>
+            </article>
+            <div class="clearfix visible-xs visible-sm"></div>
+            <article class="item-product col-xs-6 col-sm-6 col-md-3">
+               <figure class="item-image">
+                  <a href="" class="rellover-image">
+                     <img src="assets/img/product/product-index-3.png" alt="Angelina Besos" class="img-responsive">
+                  </a>
+               </figure>
+               <h5 class="item-title"><a href="" class="title-link">Vestido full licra azul</a></h5>
+               <p class="item-reference">Ref: 0001 - Angelina</p>
+               <p class="item-price"><small class="price-coin">Bf.</small> 75.300 <span class="old-price">93.500</span></p>
+               <a href="/" class="btn btn-shopping-item"><i class="fa fa-shopping-cart"></i> Comprar</a>
+            </article>
+            <article class="item-product col-xs-6 col-sm-6 col-md-3">
+               <figure class="item-image">
+                  <a href="" class="rellover-image">
+                     <img src="assets/img/product/product-index-4.png" alt="Angelina Besos" class="img-responsive">
+                  </a>
+               </figure>
+               <h5 class="item-title"><a href="" class="title-link">Boyfriend Easy Plaid Shirt</a></h5>
+               <p class="item-reference">Ref: 0001 - Angelina</p>
+               <p class="item-price"><small class="price-coin">Bf.</small> 85.0300 <span class="old-price">105.000</span></p>
+               <a href="/" class="btn btn-shopping-item"><i class="fa fa-shopping-cart"></i> Comprar</a>
+            </article>
+            <div class="clearfix visible-xs visible-sm"></div>
+            <article class="item-product col-xs-6 col-sm-6 col-md-3">
+               <figure class="item-image">
+                  <a href="" class="rellover-image">
+                     <img src="assets/img/product/product-index-5.png" alt="Angelina Besos" class="img-responsive">
+                  </a>
+               </figure>
+               <h5 class="item-title"><a href="" class="title-link">Boyfriend Easy Plaid Shirt</a></h5>
+               <p class="item-reference">Ref: 0001 - Angelina</p>
+               <p class="item-price"><small class="price-coin">Bf.</small> 63.045</p>
+               <a href="/" class="btn btn-shopping-item"><i class="fa fa-shopping-cart"></i> Comprar</a>
+            </article>
+            <article class="item-product col-xs-6 col-sm-6 col-md-3">
+               <figure class="item-image">
+                  <a href="" class="rellover-image">
+                     <img src="assets/img/product/product-index-6.png" alt="Angelina Besos" class="img-responsive">
+                  </a>
+               </figure>
+               <h5 class="item-title"><a href="" class="title-link">Boyfriend Easy Plaid Shirt</a></h5>
+               <p class="item-reference">Ref: 0001 - Angelina</p>
+               <p class="item-price"><small class="price-coin">Bf.</small> 85.450 <span class="old-price">92.000</span></p>
+               <a href="/" class="btn btn-shopping-item"><i class="fa fa-shopping-cart"></i> Comprar</a>
+            </article>
+            <div class="clearfix visible-xs visible-sm"></div>
+            <article class="item-product col-xs-6 col-sm-6 col-md-3">
+               <figure class="item-image">
+                  <a href="" class="rellover-image">
+                     <img src="assets/img/product/product-index-7.png" alt="Angelina Besos" class="img-responsive">
+                  </a>
+               </figure>
+               <h5 class="item-title"><a href="" class="title-link">Boyfriend Easy Plaid Shirt</a></h5>
+               <p class="item-reference">Ref: 0001 - Angelina</p>
+               <p class="item-price"><small class="price-coin">Bf.</small> 76.330 <span class="old-price">83.999</span></p>
+               <a href="/" class="btn btn-shopping-item"><i class="fa fa-shopping-cart"></i> Comprar</a>
+            </article>
+            <article class="item-product col-xs-6 col-sm-6 col-md-3">
+               <figure class="item-image">
+                  <a href="" class="rellover-image">
+                     <img src="assets/img/product/product-index-8.png" alt="Angelina Besos" class="img-responsive">
+                  </a>
+               </figure>
+               <h5 class="item-title"><a href="" class="title-link">Boyfriend Easy Plaid Shirt</a></h5>
+               <p class="item-reference">Ref: 0001 - Angelina</p>
+               <p class="item-price"><small class="price-coin">Bf.</small> 91.100 <span class="old-price">100.000</span></p>
+               <a href="/" class="btn btn-shopping-item"><i class="fa fa-shopping-cart"></i> Comprar</a>
+            </article>
+         </div>
+      </div>
+   </section>
+   <section id="list-featured-products" class="item-list-product padding-default">
+      <div class="container">
+         <header class="heading">
+            <h1 class="title">Productos destacados</h1>
+            <h4 class="subtitle">Lo más visto y buscado por nuestros clientes</h4>
+         </header>
+         <div class="owl-carousel owl-theme">
+            <article class="item item-product">
+               <figure class="item-image">
+                  <a href="">
+                     <img src="assets/img/product/product-slider-1.png" alt="Product slider 1">
+                  </a>
+               </figure>
+               <div class="item-caption">
+                  <h5 class="item-title"><a href="" class="title-link">Boyfriend Easy Plaid Shirt</a></h5>
+                  <p class="item-reference">Ref: 0001 - Angelina</p>
+                  <p class="item-price"><small class="price-coin">Bf.</small> 85.700 <span class="old-price">95.700</span></p>
+               </div>
+            </article>
+            <article class="item item-product">
+               <figure class="item-image">
+                  <a href="">
+                     <img src="assets/img/product/product-slider-2.png" alt="Product slider 2">
+                  </a>
+               </figure>
+               <div class="item-caption">
+                  <h5 class="item-title"><a href="" class="title-link">Boyfriend Easy Plaid Shirt</a></h5>
+                  <p class="item-reference">Ref: 0001 - Angelina</p>
+                  <p class="item-price"><small class="price-coin">Bf.</small> 55.800</p>
+               </div>
+            </article>
+            <article class="item item-product">
+               <figure class="image-product image-bg-white">
+                  <a href="">
+                     <img src="assets/img/product/product-slider-3.png" alt="Product slider 3">
+                  </a>
+               </figure>
+               <div class="item-caption">
+                  <h5 class="item-title"><a href="" class="title-link">Boyfriend Easy Plaid Shirt</a></h5>
+                  <p class="item-reference">Ref: 0001 - Angelina</p>
+                  <p class="item-price"><small class="price-coin">Bf.</small> 77.900 <span class="old-price">87.000</span></p>
+               </div>
+            </article>
+            <article class="item item-product">
+               <figure class="image-product image-bg-white">
+                  <a href="">
+                     <img src="assets/img/product/product-slider-4.png" alt="Product slider 4">
+                  </a>
+               </figure>
+               <div class="item-caption">
+                  <h5 class="item-title"><a href="" class="title-link">Boyfriend Easy Plaid Shirt</a></h5>
+                  <p class="item-reference">Ref: 0001 - Angelina</p>
+                  <p class="item-price"><small class="price-coin">Bf.</small> 88.500</p>
+               </div>
+            </article>
+            <article class="item item-product">
+               <figure class="image-product image-bg-white">
+                  <a href="">
+                     <img src="assets/img/product/product-slider-5.png" alt="Product slider 5">
+                  </a>
+               </figure>
+               <div class="item-caption">
+                  <h5 class="item-title"><a href="" class="title-link">Boyfriend Easy Plaid Shirt</a></h5>
+                  <p class="item-reference">Ref: 0001 - Angelina</p>
+                  <p class="item-price"><small class="price-coin">Bf.</small> 74.600 </p>
+               </div>
+            </article>
+            <article class="item item-product">
+               <figure class="image-product image-bg-white">
+                  <a href="">
+                     <img src="assets/img/product/product-slider-6.png" alt="Product slider 6">
+                  </a>
+               </figure>
+               <div class="item-caption">
+                  <h5 class="item-title"><a href="" class="title-link">Boyfriend Easy Plaid Shirt</a></h5>
+                  <p class="item-reference">Ref: 0001 - Angelina</p>
+                  <p class="item-price"><small class="price-coin">Bf.</small> 75.000 <span class="old-price">95.000</span></p>
+               </div>
+            </article>
+            <article class="item item-product">
+               <figure class="image-product image-bg-white">
+                  <a href="">
+                     <img src="assets/img/product/product-slider-7.png" alt="Product slider 7">
+                  </a>
+               </figure>
+               <div class="item-caption">
+                  <h5 class="item-title"><a href="" class="title-link">Boyfriend Easy Plaid Shirt</a></h5>
+                  <p class="item-reference">Ref: 0001 - Angelina</p>
+                  <p class="item-price"><small class="price-coin">Bf.</small> 95.000 <span class="old-price">105.000</span></p>
+               </div>
+            </article>
+            <article class="item item-product">
+               <figure class="image-product image-bg-white">
+                  <a href="">
+                     <img src="assets/img/product/product-slider-8.png" alt="Product slider 8">
+                  </a>
+               </figure>
+               <div class="item-caption">
+                  <h5 class="item-title"><a href="" class="title-link">Boyfriend Easy Plaid Shirt</a></h5>
+                  <p class="item-reference">Ref: 0001 - Angelina</p>
+                  <p class="item-price"><small class="price-coin">Bf.</small> 95.000 <span class="old-price">105.000</span></p>
+               </div>
+            </article>
+            <article class="item item-product">
+               <figure class="image-product image-bg-white">
+                  <a href="">
+                     <img src="assets/img/product/product-slider-9.png" alt="Product slider 9">
+                  </a>
+               </figure>
+               <div class="item-caption">
+                  <h5 class="item-title"><a href="" class="title-link">Boyfriend Easy Plaid Shirt</a></h5>
+                  <p class="item-reference">Ref: 0001 - Angelina</p>
+                  <p class="item-price"><small class="price-coin">Bf.</small> 95.000 <span class="old-price">105.000</span></p>
+               </div>
+            </article>
+            <article class="item item-product">
+               <figure class="image-product image-bg-white">
+                  <a href="">
+                     <img src="assets/img/product/product-slider-10.png" alt="Product slider 10">
+                  </a>
+               </figure>
+               <div class="item-caption">
+                  <h5 class="item-title"><a href="" class="title-link">Boyfriend Easy Plaid Shirt</a></h5>
+                  <p class="item-reference">Ref: 0001 - Angelina</p>
+                  <p class="item-price"><small class="price-coin">Bf.</small> 95.000</p>
+               </div>
+            </article>
+            <article class="item item-product">
+               <figure class="image-product image-bg-white">
+                  <a href="">
+                     <img src="assets/img/product/product-slider-11.png" alt="Product slider 11">
+                  </a>
+               </figure>
+               <div class="item-caption">
+                  <h5 class="item-title"><a href="" class="title-link">Boyfriend Easy Plaid Shirt</a></h5>
+                  <p class="item-reference">Ref: 0001 - Angelina</p>
+                  <p class="item-price"><small class="price-coin">Bf.</small> 95.000 <span class="old-price">105.000</span></p>
+               </div>
+            </article>
+            <article class="item item-product">
+               <figure class="image-product image-bg-white">
+                  <a href="">
+                     <img src="assets/img/product/product-slider-12.png" alt="Product slider 12">
+                  </a>
+               </figure>
+               <div class="item-caption">
+                  <h5 class="item-title"><a href="" class="title-link">Boyfriend Easy Plaid Shirt</a></h5>
+                  <p class="item-reference">Ref: 0001 - Angelina</p>
+                  <p class="item-price"><small class="price-coin">Bf.</small> 95.000 <span class="old-price">105.000</span></p>
+               </div>
+            </article>
+            <article class="item item-product">
+               <figure class="image-product image-bg-white">
+                  <a href="">
+                     <img src="assets/img/product/product-slider-13.png" alt="Product slider 13">
+                  </a>
+               </figure>
+               <div class="item-caption">
+                  <h5 class="item-title"><a href="" class="title-link">Boyfriend Easy Plaid Shirt</a></h5>
+                  <p class="item-reference">Ref: 0001 - Angelina</p>
+                  <p class="item-price"><small class="price-coin">Bf.</small> 95.000 <span class="old-price">105.000</span></p>
+               </div>
+            </article>
+         </div>
+      </div>
+   </section>
+   <footer id="footer-container">
+      <div class="container">
+         <div class="row">
+            <article class="grid-col-footer col-xs-6 col-sm-6 col-md-3">
+               <h4 class="footer-title">Redes sociales</h4>
+               <p>Síguenos en nuestras redes sociales para estar actualizado con lo más reciente de nuestros lanzamientos</p>
+               <ul class="social-buttons list-inline">
+                  <li><a href=""><i class="fa fa-facebook"></i></a></li>
+                  <li><a href=""><i class="fa fa-twitter"></i></a></li>
+                  <li><a href=""><i class="fa fa-instagram"></i></a></li>
+               </ul>
+            </article>
+            <article class="grid-col-footer col-xs-6 col-sm-6 col-md-3">
+               <h4 class="footer-title">Usuarios</h4>
+               <ul class="list-footer-link list-unstyled">
+                  <li><a href="">Iniciar sesión</a></li>
+                  <li><a href="">Crear cuenta</a></li>
+                  <li><a href="">Eliminar usuario</a></li>
+                  <li><a href="">Actualizar información</a></li>
+               </ul>
+            </article>
+            <div class="clearfix visible-xs visible-sm"></div>
+            <article class="grid-col-footer col-xs-6 col-sm-6 col-md-3">
+               <h4 class="footer-title">Acerca de nosotros</h4>
+               <ul class="list-footer-link list-unstyled">
+                  <li><a href="">¿Quienes somos?</a></li>
+                  <li><a href="">Contacto y sugerencias</a></li>
+                  <li><a href="">Trabaja con nosotros</a></li>
+                  <li><a href="">Información legal</a></li>
+               </ul>
+            </article>
+            <article class="grid-col-footer col-xs-6 col-sm-6 col-md-3">
+               <h4 class="footer-title">Atención al cliente</h4>
+               <ul class="list-footer-link list-unstyled">
+                  <li><a href="">Preguntas frecuentes</a></li>
+                  <li><a href="">Políticas de devolución</a></li>
+                  <li><a href="">Condiciones de servicios</a></li>
+                  <li><a href="">Realiza tus compras seguras</a></li>
+               </ul>
+            </article>
+         </div>
+      </div>
+      <section id="footer-copyright">
+         <div class="container">
+            <div class="row">
+               <div class="col-copyright col-xs-12 col-sm-6">
+                  <p class="text-copyright text-left"><i class="fa fa-copyright"></i> Copyright 2017 - <strong class="text-uppercase">GabyRevilla.com.ve</strong></p>
+               </div>
+               <div class="col-copyright col-xs-12 col-sm-6">
+                  <p class="text-copyright text-right">Diseño y desarrollo web: <a href="https://github.com/azaconorsini/gabyrevilla" title="Portafolio digital" class="portfolio-dev">Johan Azacon</a></p>
+               </div>
+            </div>
+         </div>
+      </section>
+   </footer>
+   
+   <!-- Archivos Javascript -->
+   <script src="assets/js/jquery.min.js"></script>
+   <script src="assets/js/bootstrap.min.js"></script>
+   <script src="assets/js/jquery.touchSwipe.min.js"></script>
+   <script src="assets/js/SmoothScroll.min.js"></script>
+   <script src="assets/js/owl.carousel.min.js"></script>
+   <script src="assets/js/customize.js"></script>
+</body>
+</html>

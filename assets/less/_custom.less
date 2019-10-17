@@ -1,0 +1,43 @@
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"] {
+	.prefixed(border-radius, 0px);
+	&:focus {
+		outline: none;
+		outline: 1px dotted \9; // Para IE 9
+	}
+}
+
+.btn {
+	text-shadow: none;
+	background-image: none;
+	border-color: none;
+	border-bottom-color: none;
+	outline: none;
+	.prefixed(box-shadow, 0);
+	.prefixed(border-radius, 0);
+	&-medium,
+	&-lg,
+	&-sm,
+	&-xs {
+		.prefixed(border-radius, 0);
+	}
+}
+a.btn,
+.btn:focus {
+	outline: 0;
+}
+

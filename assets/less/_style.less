@@ -1,0 +1,443 @@
+/*-- =============================================================================
+		ESTILOS PRINCIPALES
+
+	    Nombre del tema: GabyRevilla
+	    Autor: Johan J. Azacon O.
+	    Autor URL: http://azaconorsini.com.ve | http://jgproducciones.com.ve
+	    Contacto: j.azacon@gmail.com - (+58) 412.8605556
+	============================================================================= --*/
+@charset "UTF-8";
+/* ===== Google fonts ===== */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i,800,800i|Montserrat:300,300i,400,400i,700,700i,900,900i');
+
+/* ================================= 
+1. Propiedades generales 
+================================= */
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font: 400 14px/22px 'Montserrat', sans-serif;
+	color: #1f1f1f;
+	background-color: #fff; 
+	text-rendering: optimizeLegibility; // Optimiza la legibilidad del texto
+	-webkit-font-smoothing: antialiased; // Suaviza las fuentes del sistema
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: #1f1f1f;
+	font-weight: 300;
+	margin-bottom: 15px;
+	.transition();
+	a{
+		font-weight: inherit;
+		color: inherit;
+	}
+}
+a {
+	outline: none;
+	.transition();
+	&:hover {
+		text-decoration: none;
+	}
+}
+section {
+	padding: 100px 0 80px;
+	&.bg-gray {
+		background-color: #eee;
+	}
+	&.bg-dark {
+		background-color: #252525;
+		h3 {
+			color: #f8f8f8;
+		}
+		p {
+			color: #999;
+		}
+		a {
+			color: #aaa;
+			font-weight: bold;
+			&:hover,
+			&:hover:focus{
+				color: @color-gold-base;
+				padding-left: 5px;
+			}
+		}
+	}
+}
+strong,
+b {
+	font-weight: 700;
+}
+.video-container {
+	height: 0;
+	position: relative;
+	margin: 0 0 15px 0;
+	padding-bottom: 51%;
+	padding-top: 30px;
+	overflow: hidden;
+	border: 1px solid #ddd;
+	iframe,
+	object,
+	embed {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+}
+.row {
+	margin-bottom: 40px;
+	&.row,
+	&.row-fluid {
+		margin-bottom: 0;
+	}
+	&.row-fluid [class*="col-"]{
+		margin-bottom: 30px;
+	}
+}
+::-moz-selection{
+	color: #333;
+	background-color: #e7bf00;
+}
+::selection {
+	color: #333;
+	background-color: #e7bf00
+}
+
+// Contenedor de titulos
+
+.heading {
+	width: 100%;
+	margin-bottom: 60px;
+	text-align: left;
+	h1,
+	h2,
+	h3,
+	h4 {
+		font-weight: 900;
+		text-transform: uppercase;
+		margin: 0;
+	}
+	h4 {
+		font-weight: 300;
+	}
+	&.footer {
+		margin-bottom: 40px;
+	}
+}
+
+// Font Awesome icons
+
+ul.the-icons {
+	list-style: none;
+	margin: 0; 
+	padding: 0;
+}
+.icon-square,
+.icon-rounded,
+.icon-plain,
+.icon-circled {
+	width: 18px;
+	height: 18px;
+	font-size: 12px;
+	color: #fff;
+	line-height: 18px;
+	text-shadow: none;
+	display: inline-block !important;
+	text-align: center !important;
+	.prefixed(transition, .25s);
+}
+.icon-rounded {
+	border-width: 2px;
+	border-style: solid;
+	.prefixed(border-radius, 100%);
+
+	&-gold {
+		border-color: darken(@color-gold-base,4%);
+		color: @color-gold-base;
+	}
+	&-black {
+
+	}
+	&-white {
+		border-color: darken(#fff, 5%);
+		color: #fff;
+		&:hover,
+		&:hover:focus {
+			color: @color-gold-darken;
+			background-color: #333;
+			border-color: darken(#333, 4%);
+			.prefixed(box-shadow, 0 0 10px #222);
+		}
+	}
+
+	&.icon-gold {
+		border-color: #fff;
+		background-color: @color-gold-darken;
+		&:hover{
+			.icon-blacknight();
+			border-color: #333;
+			color: @color-gold-darken;
+		}
+	}
+	&.icon-gold-big {
+		border-color: darken(@color-gold-base, 2%);
+		color: @color-gold-base
+	}
+	&.icon-blacknight {
+		border-color: #fff;
+		background-color: @color-blacknight;
+	}
+	&.icon-blackfade {
+		border-color: transparent;
+		background-color: fade(#000, 80%);
+	}
+}
+.icon-14 {
+	width: 14px;
+	height: 14px;
+	padding: 1px;
+	font-size: 10px;
+	line-height: 14px;
+}
+.icon-18 {
+	width: 18px;
+	height: 18px;
+	padding: 3px;
+	font-size: 12px;
+	line-height: 18px;
+}
+.icon-32 {
+	width: 32px;
+	height: 32px;
+	font-size: 18px;
+	padding: 6px;
+}
+.icon-46 {
+	width: 46px;
+	height: 46px;
+	line-height: 46px;
+	font-size: 30px;
+}
+.icon-62 {
+	width: 62px;
+	height: 62px;
+	padding: 10px;
+	font-size: 42px;
+}
+
+/* ================================= 
+2. Cabecera principal
+================================= */
+
+#header-container {
+	width: 100%;
+	height: 1%;
+	position: relative;
+	display: block;
+	background-color: #fff;
+	.prefixed(box-shadow, 0 0 30px fade(#000, 40%));
+
+	// Barra superior
+
+	#top-bar {
+		min-height: 60px;
+		padding: 14px 0 0 0;
+		display: block;
+		box-sizing: border-box;
+		background-color: @color-gold-darken;
+		color: #333;
+		position: relative;
+		overflow: hidden;
+		ul {
+			text-align: right;
+			li {
+				padding: 0 1px;
+				&:first-child {
+					color: #fff;
+					padding-right: 15px;
+					text-transform: uppercase;
+					font-weight: @font-weight-bold;
+				}
+			}
+		}
+	}
+
+	// Barra de navegación superior
+
+	nav.navbar-default {
+		min-height: auto;
+		position: relative;
+		background-color: transparent;
+		margin-bottom: 0;
+		border: none;
+		.prefixed(border-radius, 0);
+
+		.navbar-header {
+			.navbar-toggle {}
+			.navbar-brand {
+				height: auto;
+				&:hover,
+				&:hover:focus{
+					.opacity(0.8);
+				}
+			}
+		}
+
+		.navbar-collapse {
+			ul.navbar-nav {
+				padding: 30px 0 20px;
+				&>li {
+					&>a{
+						font-size: @font-size-base;
+						font-weight: @font-weight-black;
+						text-transform: uppercase;
+						color: #333;
+						&:hover,
+						&:hover:focus{
+							color: @color-gray-asbestos;
+						}
+						i.fa{
+							font-size: @font-size-medium;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	// Sección inferior debajo del menu principal
+
+	.section-bottom-nav {
+		.top-contact {
+			position: relative;
+			overflow: hidden;
+		}
+		span.icon-contact {
+			display: inline-block;
+			float: left;
+			margin: 0 20px 0 15px;
+		}
+		p {
+			color: #999;
+			margin: 0;
+			&.primary-text {
+				color: #333;
+				font-size: @font-size-medium;
+				text-transform: uppercase;
+				font-weight: @font-weight-black;
+				span {
+					color: @color-gold-base;
+				}
+			}
+		}
+	}
+
+	// Formulario de búsqueda
+
+	form#search-form {
+		input.form-control {
+			padding: 4px 0;
+			height: auto;
+			border: none;
+			outline: none;
+			background-color: transparent;
+			.prefixed(box-shadow, none);
+		}
+		button.btn-default {
+			border: none;
+			outline: none;
+			font-size: 20px;
+			color: #999;
+			padding: 0;
+			background-color: transparent;
+			.prefixed(transition, .25s);
+			&:hover,
+			&:hover:focus {
+				color: #222;
+			}
+		}
+	}
+}
+
+
+/* ======================================= 
+5. Pie de página
+======================================= */
+section#footer-container {
+	ul {
+		li {
+			&:before,
+			a:before{
+				font-family: "fontAwesome";
+				font-size: 15px;
+				color: #aaa;
+				content: "\f105";
+				margin-right: 5px;
+			}
+			a:before{
+				margin-left: -10px;
+			}
+			a:hover:before{
+				margin-right: 5px;
+			}
+		}
+	}
+}
+
+/* ======================================= 
+5. Elementos auxiliares de maquietación
+======================================= */
+
+.grid-col-fluid {
+	height: 65px;
+	background-color: #f5f5f5;
+	padding: 20px 25px;
+	box-sizing: border-box;
+	float: left;
+	&.grid-col-70 {
+		width: 67%;
+		margin-right: 15px;
+	} 
+	&.grid-col-30 {
+		width: 30%;
+	}
+}
+
+ @media screen and (max-width: 768px) {
+          .side-collapse-container{
+              width:100%;
+              position:relative;
+              left:0;
+              transition:left .4s;
+          }
+          .side-collapse-container.out{
+              left:200px;
+          }
+          .side-collapse {
+              top:50px;
+              bottom:0;
+              left:0;
+              width:200px;
+              position:fixed;
+              overflow:hidden;
+              transition:width .4s;
+          }
+          .side-collapse.in {
+              width:0;
+          }
+      }
+     
+
+/* ===== Varibales y Mixins LESS ===== */
+@import "_mixins.less";
+@import "_variables.less";
+@import "_custom.less";
+@import "_screen.less";

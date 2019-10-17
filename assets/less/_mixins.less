@@ -1,0 +1,93 @@
+// =============================================================================
+//		MIXINS LESS
+		
+//	    Nombre del tema: GabyRevilla
+//	    Autor: Johan J. Azacon O.
+//	    Autor URL: http://azaconorsini.com.ve | http://jgproducciones.com.ve
+//	    Contacto: j.azacon@gmail.com - (+58) 412.8605556
+//	============================================================================= --*/
+
+// ===== Propiedade con prefijos =====
+
+.prefixed(@property, @value) {
+  & when (@webkit = true) {
+    -webkit-@{property}: @value;
+  }
+  & when (@moz = true) {
+      -moz-@{property}: @value;
+  }
+  & when (@ms = true) {
+      -ms-@{property}: @value;
+  }
+  & when (@o = true) {
+      -o-@{property}: @value;
+  }
+  @{property}: @value;
+}
+@webkit: true;
+@moz: true;
+@ms: false;
+@o: false;
+
+// ====== Opacidad ======
+
+.opacity(@value) {
+	opacity: @value;
+	@filter: @value*100;
+	//filter: "alpha(opacity=@{filter})";
+}
+
+// ====== Degradados ======
+
+.bg-gradient(@origen, @inicio, @final) {
+	background-color: @inicio;
+	background-image: -webkit-linear-gradient(@origen, @inicio, @final);
+	background-image: -moz-linear-gradient(@origen, @inicio, @final);
+	background-image: -ms-linear-gradient(@origen, @inicio, @final);
+	background-image: -o-linear-gradient(@origen, @inicio, @final); 
+}
+
+// ===== Transiciones ===== 
+
+.transition(@property: all, @duracion: 0.35s) {
+	.prefixed(transition, @property @duracion);
+}
+
+// ===== Caja con sombras =====
+
+.box-shadow(@x: 0, @y: 2px, @blur: 5px, @alpha: 0.5 ) {
+	.prefixed(box-shadow, @x @y @blur rgba(0,0,0,@alpha));
+}
+
+// ====== Botón con efectos =====
+
+.button-variant(@color; @fondo; @borde){
+	color: @color;
+	background-color: @fondo;
+	border-color: @borde;
+	&:hover, 
+	&:focus, 
+	&:active, 
+	&.active,
+	.open .dropdown-toggle {
+		color: @color;
+		background-color: darken(@fondo, 10%);
+		border-color: darken(@borde, 12%);
+	} 
+	&:active, 
+	&.active,
+	.open .drondown-toggle {
+		background-image: none;
+	}
+	&.disabled,
+	&[disabled],
+	fieldset[disabled] &{
+		background-color: @fondo;
+		border-color: @borde;
+	}
+	.badge {
+		color: @fondo;
+		background-color: @color;
+	}
+}
+
